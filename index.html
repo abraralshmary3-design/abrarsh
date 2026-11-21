@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>أبرار حضيري الشمري | مطورة ومبرمجة مواقع</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .project-video-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .project-video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .video-open {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-family: inherit;
+            opacity: 0;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .project-video-link:hover .video-open {
+            opacity: 1;
+        }
+
+        @media (hover: none) {
+            .video-open {
+                opacity: 1;
+            }
+        }
+
+        /* ===== فيديو المشروع الثالث ===== */
+
+        .project-video-btn {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            border: none;
+            background: transparent;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project-video-btn:hover .video-open {
+            opacity: 1;
+        }
+
+        /* ===== عرض الفيديو بالشاشة الكاملة ===== */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 16px;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox video {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            font-size: 26px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ===== فيديو المشروع الأول ===== */
+
+        .image-one {
+            overflow: hidden;
+            background: #171717;
+        }
+
+        .image-one video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- القائمة العلوية -->
+
+    <header>
+
+        <div class="navbar">
+
+            <a href="#home" class="logo">
+                أبرار حضيري الشمري
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+                ☰
+            </button>
+
+            <nav id="navMenu">
+
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#about">نبذة عني</a>
+                <a href="#skills">المهارات</a>
+                <a href="#projects">الأعمال</a>
+                <a href="#contact">التواصل</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- الصفحة الرئيسية -->
+
+        <section class="section hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="subtitle">
+                    مطورة ومبرمجة مواقع
+                </span>
+
+                <h1>
+                    أبرار حضيري الشمري
+                </h1>
+
+                <p>
+                    أبني مواقع عملية وأنيقة وسهلة الاستخدام،
+                    من الواجهة إلى الخادم.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn light">
+                        تصفحي أعمالي ←
+                    </a>
+
+                    <a href="https://wa.me/966563639203"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn dark">
+
+                        ☎ تواصلي معي
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- الصورة الشخصية -->
+
+            <div class="hero-image">
+
+                <img src="ab.png" alt="أبرار حضيري الشمري">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- نبذة عني -->
+
+        <section class="section about" id="about">
+
+            <div class="section-heading">
+
+                <span class="subtitle">نبذة عني</span>
+
+                <h2>مرحباً، أنا أبرار</h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        أنا أبرار حضيري الشمري، مطورة ومبرمجة مواقع،
+                        أهتم ببناء مواقع عملية وأنيقة وسهلة الاستخدام.
+                        أعمل في تطوير الواجهات الأمامية والخلفية،
+                        وأهتم بتصميم واجهات المستخدم وتجربة المستخدم،
+                        كما أستخدم Figma و Visual Studio في عملي.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <small>الاسم</small>
+                        <strong>أبرار حضيري الشمري</strong>
+                    </div>
+
+                    <div>
+                        <small>المسمى المهني</small>
+                        <strong>مطورة ومبرمجة مواقع</strong>
+                    </div>
+
+                    <div>
+                        <small>الأدوات</small>
+                        <strong>Figma - Visual Studio</strong>
+                    </div>
+
+                    <a href="https://wa.me/966563639203"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn dark full">
+
+                        تواصلي معي
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- المهارات -->
+
+        <section class="section skills" id="skills">
+
+            <div class="section-heading">
+
+                <span class="subtitle">المهارات</span>
+
+                <h2>ما أتقنه</h2>
+
+                <p>
+                    مجالات وأدوات أستخدمها لبناء مواقع متكاملة
+                    من التصميم إلى البرمجة.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">⌘</div>
+
+                    <div>
+                        <h3>تطوير الواجهات الأمامية</h3>
+                        <small>Front-End</small>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">▤</div>
+
+                    <div>
+                        <h3>تطوير الواجهات الخلفية</h3>
+                        <small>Back-End</small>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">✎</div>
+
+                    <div>
+                        <h3>تصميم واجهات وتجربة المستخدم</h3>
+                        <small>UI / UX</small>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">F</div>
+
+                    <div>
+                        <h3>Figma</h3>
+                        <small>أداة تصميم</small>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">⌘</div>
+
+                    <div>
+                        <h3>Visual Studio</h3>
+                        <small>بيئة تطوير</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- الأعمال والمشاريع -->
+
+        <section class="section projects" id="projects">
+
+            <div class="section-heading">
+
+                <span class="subtitle">الأعمال والمشاريع</span>
+
+                <h2>من أعمالي</h2>
+
+                <p>
+                    نماذج من المواقع والمشاريع التي عملت عليها.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- المشروع الأول: كوفي رواق -->
+
+                <div class="project-card">
+
+                    <div class="project-image image-one">
+
+                        <video
+                            class="project-video"
+                            controls
+                            playsinline
+                            preload="metadata">
+
+                            <source src="./riwq-web.mov" type="video/quicktime">
+
+                            متصفحك لا يدعم تشغيل الفيديو.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <h3>كوفي رِواق | Riwaq Café</h3>
+
+                        <p>
+                            تصميم وتطوير موقع إلكتروني لكوفي رِواق،
+                            يعرض قائمة القهوة والمشروبات والحلويات
+                            بطريقة أنيقة ومنظمة، مع واجهة سهلة الاستخدام
+                            وتجربة تصفح مميزة للعملاء.
+                            تم تنفيذ المشروع باستخدام HTML و CSS و JavaScript.
+                        </p>
+
+                        <span class="tag">HTML - CSS - JavaScript</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- المشروع الثاني -->
+
+                <div class="project-card">
+
+                    <div class="project-image image-two">
+                        <span>✧</span>
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>عنوان المشروع الثاني</h3>
+
+                        <p>
+                            أضيفي هنا وصفاً مختصراً للمشروع ودورك فيه.
+                        </p>
+
+                        <span class="tag">JavaScript</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- المشروع الثالث: دون تغيير -->
+
+                <div class="project-card">
+
+                    <div class="project-image image-three">
+
+                        <button type="button"
+                                class="project-video-btn"
+                                id="openVideo"
+                                aria-label="مشاهدة فيديو المشروع الثالث كاملاً">
+
+                            <video
+                                class="project-video"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                preload="metadata">
+
+                                <source src="bhr.mov" type="video/quicktime">
+
+                                متصفحك لا يدعم تشغيل الفيديو.
+
+                            </video>
+
+                            <span class="video-open">
+                                ▶️ مشاهدة الفيديو كاملاً
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>عنوان المشروع الثالث</h3>
+
+                        <p>
+                            أضيفي هنا وصفاً مختصراً للمشروع ودورك فيه.
+                        </p>
+
+                        <span class="tag">Figma - UI/UX</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- التواصل -->
+
+        <section class="section contact" id="contact">
+
+            <div class="section-heading">
+
+                <span class="subtitle">التواصل</span>
+
+                <h2>لنعمل معاً</h2>
+
+                <p>
+                    يسعدني تواصلك معي لمناقشة مشروعك
+                    أو أي استفسار.
+                </p>
+
+            </div>
+
+
+            <!-- واتساب -->
+
+            <div class="contact-card">
+
+                <div>
+
+                    <small>رقم الهاتف</small>
+
+                    <strong dir="ltr">0563639203</strong>
+
+                </div>
+
+                <a href="https://wa.me/966563639203"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn dark">
+
+                    ☎ تواصلي الآن
+
+                </a>
+
+            </div>
+
+
+            <!-- لينكدإن -->
+
+            <a href="https://www.linkedin.com/in/abrar-al-shammari-145683206?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="linkedin-card">
+
+                <div class="linkedin-icon">
+                    in
+                </div>
+
+                <div>
+
+                    <small>LinkedIn</small>
+
+                    <strong>أبرار حضيري الشمري</strong>
+
+                </div>
+
+                <span class="arrow">←</span>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- نهاية الموقع -->
+
+    <footer>
+
+        <strong>أبرار حضيري الشمري</strong>
+
+        <span>©️ 2026 جميع الحقوق محفوظة</span>
+
+        <div>
+
+            <a href="#home">الرئيسية</a>
+
+            &nbsp; | &nbsp;
+
+            <a href="#projects">الأعمال</a>
+
+            &nbsp; | &nbsp;
+
+            <a href="#contact">التواصل</a>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- نافذة عرض الفيديو بالشاشة الكاملة -->
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الفيديو">
+
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="إغلاق">
+            &times;
+        </button>
+
+        <video id="lightboxVideo" controls playsinline></video>
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+    <script>
+        (function () {
+
+            const openBtn = document.getElementById('openVideo');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+            const closeBtn = document.getElementById('lightboxClose');
+
+            function openLightbox() {
+                lightboxVideo.src = 'bhr.mov';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                lightboxVideo.play().catch(function () {});
+            }
+
+            function closeLightbox() {
+                lightboxVideo.pause();
+                lightboxVideo.removeAttribute('src');
+                lightboxVideo.load();
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            openBtn.addEventListener('click', openLightbox);
+            closeBtn.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+
+        })();
+    </script>
+
+</body>
+
+</html>

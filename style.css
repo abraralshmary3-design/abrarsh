@@ -1,0 +1,662 @@
+/* =================================
+   إعدادات الموقع الأساسية
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: #f8f6f1;
+    color: #40383a;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =================================
+   القائمة العلوية
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(248, 246, 241, 0.96);
+    border-bottom: 1px solid #eee9e2;
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    max-width: 1180px;
+    margin: auto;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 600;
+    color: #554448;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: #817777;
+    font-size: 13px;
+    padding: 8px 13px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #eee9e1;
+    color: #514448;
+}
+
+.menu-toggle {
+    display: none;
+    background: #eee9e1;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* =================================
+   إعدادات الأقسام
+================================= */
+
+.section {
+    max-width: 1180px;
+    margin: auto;
+    padding: 110px 28px;
+}
+
+.subtitle {
+    display: block;
+    color: #a28e7b;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #8b8180;
+    font-size: 14px;
+}
+
+/* =================================
+   الصفحة الرئيسية
+================================= */
+
+.hero {
+    min-height: 610px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: #887e7b;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* الأزرار */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 23px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #493a3a18;
+}
+
+.dark {
+    background: #554448;
+    color: white;
+    border: 1px solid #554448;
+}
+
+.light {
+    border: 1px solid #d9d2ca;
+    color: #6b6060;
+    background: #faf9f6;
+}
+
+/* =================================
+   صورة الصفحة الرئيسية
+================================= */
+
+.hero-image {
+    height: 400px;
+    border: 7px solid white;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #e8ded1, #f4eee5);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px #6c55401a;
+}
+
+.desk {
+    position: absolute;
+    bottom: 15%;
+    width: 110%;
+    height: 35%;
+    left: -5%;
+    background: #e0d0bd;
+    transform: rotate(-3deg);
+}
+
+.laptop {
+    position: absolute;
+    left: 28%;
+    bottom: 75%;
+    width: 45%;
+    height: 110%;
+}
+
+.screen {
+    background: #34393d;
+    height: 90%;
+    border: 7px solid #656569;
+    border-radius: 9px;
+    padding: 30px 15px;
+}
+
+.screen span {
+    display: block;
+    height: 4px;
+    background: #929899;
+    margin-bottom: 12px;
+    width: 70%;
+}
+
+.screen span:nth-child(2) {
+    width: 50%;
+}
+
+.screen span:nth-child(3) {
+    width: 85%;
+}
+
+.plant {
+    position: absolute;
+    left: 10%;
+    bottom: 90%;
+    font-size: 65px;
+}
+
+.coffee {
+    position: absolute;
+    right: 12%;
+    bottom: 75%;
+    font-size: 35px;
+}
+
+/* =================================
+   نبذة عني
+================================= */
+
+.about {
+    border-top: 1px solid #eee9e2;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 2.3;
+    color: #766d6c;
+}
+
+.profile-card {
+    background: #fffdfa;
+    border: 1px solid #e8e1d9;
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    box-shadow: 0 10px 30px #594a3c08;
+}
+
+.profile-icon {
+    width: 48px;
+    height: 48px;
+    background: #eee7dc;
+    color: #8f7866;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.profile-card small,
+.contact-card small {
+    display: block;
+    color: #a39790;
+    font-size: 11px;
+}
+
+.profile-card strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.full {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* =================================
+   المهارات
+================================= */
+
+.skills {
+    max-width: none;
+    background: #f1eee7;
+    padding-left: max(28px, calc((100% - 1124px) / 2));
+    padding-right: max(28px, calc((100% - 1124px) / 2));
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.skill-card {
+    background: #fbfaf7;
+    border: 1px solid #e6e1d9;
+    border-radius: 16px;
+    padding: 22px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #594a3c10;
+}
+
+.skill-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #f0eadf;
+    color: #a18a71;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.skill-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skill-card small {
+    font-size: 11px;
+    color: #9b908b;
+}
+
+/* =================================
+   الأعمال والمشاريع
+================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #fffdfa;
+    border: 1px solid #e7e0d8;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px #594a3c12;
+}
+
+.project-image {
+    height: 190px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #8f7c6d;
+}
+
+.image-one {
+    background: #e9dfd2;
+}
+
+.image-two {
+    background: #e4e7df;
+}
+
+.image-three {
+    background: #e8e1e5;
+}
+
+.project-info {
+    padding: 21px;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: #928886;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid #e5ddd3;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 10px;
+    color: #8e8075;
+}
+
+/* =================================
+   التواصل وواتساب
+================================= */
+
+.contact-card {
+    max-width: 690px;
+    padding: 25px 30px;
+    background: #fffdfa;
+    border: 1px solid #e5ded6;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 10px 30px #594a3c08;
+}
+
+.contact-card strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/* لينكدإن */
+
+.linkedin-card {
+    max-width: 690px;
+    margin-top: 16px;
+    padding: 19px 24px;
+    background: #f0ede7;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.linkedin-card:hover {
+    background: #e9e3da;
+}
+
+.linkedin-icon {
+    width: 38px;
+    height: 38px;
+    background: #554448;
+    color: white;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.linkedin-card small {
+    display: block;
+    font-size: 10px;
+    color: #9a8d84;
+}
+
+.linkedin-card strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.arrow {
+    margin-right: auto;
+    color: #9a8d84;
+}
+
+/* =================================
+   أسفل الموقع
+================================= */
+
+footer {
+    border-top: 1px solid #e9e3db;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #9a908a;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #615658;
+    font-weight: 500;
+}
+
+/* =================================
+   تصميم الجوال
+================================= */
+
+@media (max-width: 760px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 14px;
+        left: 14px;
+        background: #fffdfa;
+        border: 1px solid #e8e1d9;
+        border-radius: 15px;
+        padding: 12px;
+        flex-direction: column;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 75px 22px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        height: 290px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .skills {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .skill-card {
+        padding: 13px;
+        gap: 9px;
+    }
+
+    .skill-card h3 {
+        font-size: 12px;
+    }
+
+    .skill-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 33px;
+    }
+}
+/* إظهار صورة الشعار كاملة داخل الإطار */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* خلفية الإطار */
+.hero-image {
+    background-color: #f3e9dc;
+}
