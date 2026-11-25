@@ -405,7 +405,7 @@
                             playsinline
                             preload="metadata">
 
-                            <source src="./riwq-web.mov" type="video/quicktime">
+                            <source src="br.mp4" type="video/mp4">
 
                             متصفحك لا يدعم تشغيل الفيديو.
 
@@ -458,7 +458,7 @@
 
 
 
-                <!-- المشروع الثالث: دون تغيير -->
+                <!-- المشروع الثالث -->
 
                 <div class="project-card">
 
@@ -611,13 +611,26 @@
 
     <!-- نافذة عرض الفيديو بالشاشة الكاملة -->
 
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الفيديو">
+    <div class="lightbox"
+         id="lightbox"
+         role="dialog"
+         aria-modal="true"
+         aria-label="عرض الفيديو">
 
-        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="إغلاق">
+        <button type="button"
+                class="lightbox-close"
+                id="lightboxClose"
+                aria-label="إغلاق">
+
             &times;
+
         </button>
 
-        <video id="lightboxVideo" controls playsinline></video>
+        <video id="lightboxVideo"
+               controls
+               playsinline>
+
+        </video>
 
     </div>
 
@@ -636,29 +649,49 @@
             const closeBtn = document.getElementById('lightboxClose');
 
             function openLightbox() {
+
                 lightboxVideo.src = 'bhr.mov';
+
                 lightbox.classList.add('open');
+
                 document.body.style.overflow = 'hidden';
+
                 lightboxVideo.play().catch(function () {});
+
             }
 
             function closeLightbox() {
+
                 lightboxVideo.pause();
+
                 lightboxVideo.removeAttribute('src');
+
                 lightboxVideo.load();
+
                 lightbox.classList.remove('open');
+
                 document.body.style.overflow = '';
+
             }
 
             openBtn.addEventListener('click', openLightbox);
+
             closeBtn.addEventListener('click', closeLightbox);
 
             lightbox.addEventListener('click', function (e) {
-                if (e.target === lightbox) closeLightbox();
+
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+
             });
 
             document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') closeLightbox();
+
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+
             });
 
         })();
