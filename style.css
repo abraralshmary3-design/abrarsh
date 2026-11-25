@@ -51,10 +51,19 @@ header {
     justify-content: space-between;
 }
 
+/* الشعار */
+
 .logo {
-    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: clamp(13px, 2vw, 17px);
     font-weight: 600;
     color: #554448;
+    white-space: nowrap;
+    line-height: 1.6;
+    flex-shrink: 1;
 }
 
 nav {
@@ -532,6 +541,12 @@ footer strong {
         padding: 15px 20px;
     }
 
+    /* ضبط الشعار في الجوال */
+    .logo {
+        font-size: 14px;
+        max-width: calc(100% - 55px);
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -638,7 +653,11 @@ footer strong {
         font-size: 33px;
     }
 }
-/* إظهار صورة الشعار كاملة داخل الإطار */
+
+/* =================================
+   إظهار صورة الشعار كاملة داخل الإطار
+================================= */
+
 .hero-image {
     width: 100%;
     height: 100%;
@@ -657,6 +676,7 @@ footer strong {
 }
 
 /* خلفية الإطار */
+
 .hero-image {
     background-color: #f3e9dc;
 }
